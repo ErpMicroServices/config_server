@@ -1,3 +1,27 @@
+server:
+  port: 8888
+
 spring:
-  application:
-    name: Configuration Server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:/Users/JimBarrows/Desktop/projects.nosync/config_server-repo
+#          clone-on-start: true
+          native:
+            search-locations: classpath:/config
+  security:
+    user:
+      name: ThisIsNotAGoodUsername
+      password: ThisIsNotAGoodPassword
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,metrics,info
+
+logging:
+  level:
+    ROOT: INFO
+    org:
+      springframework: TRACE
