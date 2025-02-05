@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.erpmicroservices.server.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
