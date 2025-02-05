@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: People and Organizations Endpoint REST
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    datasource:
+      url: jdbc:postgresql://localhost:5432/people_and_organizations
+      username: people_and_organizations
+      password: people_and_organizations
+      driver-class-name: org.postgresql.Driver
+  logging:
+    level:
+      ROOT: INFO
+      org:
+        springframework: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+
+

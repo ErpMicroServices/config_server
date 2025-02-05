@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+  profiles:
+    active: native
+  security:
+    user:
+      name: root
+      password: s3cr3t
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        cloud: DEBUG
